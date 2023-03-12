@@ -1,0 +1,20 @@
+.container{
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_title{
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.accordion__item{
+  display: block;
+}
+
+.accordion__radio{
+  display: none;
+}

@@ -1,20 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 .container{
   max-width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background: floralwhite;
+  padding: 3em;
 }
 
 .main_title{
   margin: 0 auto;
   text-align: center;
   font-weight: bolder;
+  font-size: 2em;
 }
 
 .accordion__item{
+  padding-bottom: 20px;
   display: block;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  cursor: pointer;
 }
 
 .accordion__radio{
   display: none;
 }
+
+.label__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.arrow{
+  opacity: 0;
+  height: 2em;
+  width: 2em;
+  background-image: url(./img/arrow.png);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.label__img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion:hover .arrow{
+  opacity: 1;
+  transition: 0.5s;
+}
+

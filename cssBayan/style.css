@@ -59,6 +59,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 0;
+  transition: 0.5s;
+}
+
+.acc__img{
+  height: inherit;
 }
 
 .accordion:hover .arrow{
@@ -66,3 +72,11 @@ html {
   transition: 0.5s;
 }
 
+input:checked ~ .label__title .arrow{
+  transform: rotate(180deg);
+}
+
+input:checked ~ .label__img{
+  height: auto;
+  transition: 0.5s;
+}

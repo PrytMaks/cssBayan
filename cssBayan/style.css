@@ -43,7 +43,9 @@ html {
 }
 
 .title{
+  font-size: 2em;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 .arrow{
@@ -59,12 +61,14 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 0;
-  transition: 0.5s;
+  max-height: 0;
+  overflow: hidden;
+  transition: .5s;
 }
 
 .acc__img{
   height: inherit;
+  width: 100%;
 }
 
 .accordion:hover .arrow{
@@ -77,6 +81,25 @@ input:checked ~ .label__title .arrow{
 }
 
 input:checked ~ .label__img{
-  height: auto;
+  max-height: 100em;
   transition: 0.5s;
+}
+
+
+.accordion__item:hover .label__img{
+  max-height: 100em;
+  transition: all 1.4s ease;
+}
+
+.accordion__item:hover .arrow{
+  transform: rotate(180deg);
+}
+
+.accordion:hover .title{
+  color: blue;
+  transition: 0.5s;
+}
+
+input:checked ~ .label__title{
+  color: blue;
 }

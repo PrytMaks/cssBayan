@@ -1,0 +1,148 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.container{
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: floralwhite;
+  padding: 3em;
+}
+
+.main_title{
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.accordion__item{
+  padding-bottom: 20px;
+  display: block;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.accordion__radio{
+  display: none;
+}
+
+.label__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+  font-size: 2em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.arrow{
+  opacity: 0;
+  height: 2em;
+  width: 2em;
+  background-image: url(./img/arrow.png);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.label__img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.acc__img{
+  height: inherit;
+  width: 100%;
+}
+
+.accordion:hover .arrow{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+input:checked ~ .label__title .arrow{
+  transform: rotate(180deg);
+}
+
+input:checked ~ .label__img{
+  max-height: 100em;
+  transition: 0.5s;
+}
+
+
+.accordion__item:hover .label__img{
+  max-height: 100em;
+  transition: all 1.4s ease;
+}
+
+.accordion__item:hover .arrow{
+  transform: rotate(180deg);
+}
+
+.accordion:hover .title{
+  color: blue;
+  transition: 0.5s;
+}
+
+input:checked ~ .label__title{
+  color: blue;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 1.5em;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .container{
+    max-width: 60%;
+  }
+  .main_title{
+    font-size: 1.6em;
+  }
+  .title {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 610px) {
+  .container{
+    padding: 2em;
+  }
+  
+  .main_title{
+    font-size: 1.3em;
+  }
+  .title {
+    font-size: .6em;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .main_title{
+    font-size: .6em;
+  }
+  .title {
+    font-size: .3em;
+  }
+}
